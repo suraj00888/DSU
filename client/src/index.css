@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 191 86% 51%;
+  --primary-foreground: 191 40% 98%;
+  --secondary: 191 40% 96.1%;
+  --secondary-foreground: 191 47.4% 11.2%;
+  --muted: 191 40% 96.1%;
+  --muted-foreground: 191 16.3% 46.9%;
+  --accent: 191 40% 96.1%;
+  --accent-foreground: 191 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 191 40% 98%;
+  --border: 191 31.8% 91.4%;
+  --input: 191 31.8% 91.4%;
+  --ring: 191 86% 51%;
+  --radius: 0.5rem;
+  --chart-1: 211 86% 51%;
+  --chart-2: 171 86% 51%;
+  --chart-3: 151 86% 51%;
+  --chart-4: 231 86% 51%;
+  --chart-5: 251 86% 51%;
+}
+
+.dark {
+  --background: 191 84% 4.9%;
+  --foreground: 191 40% 98%;
+  --card: 191 84% 4.9%;
+  --card-foreground: 191 40% 98%;
+  --popover: 191 84% 4.9%;
+  --popover-foreground: 191 40% 98%;
+  --primary: 191 86% 51%;
+  --primary-foreground: 191 47.4% 11.2%;
+  --secondary: 191 32.6% 17.5%;
+  --secondary-foreground: 191 40% 98%;
+  --muted: 191 32.6% 17.5%;
+  --muted-foreground: 191 20.2% 65.1%;
+  --accent: 191 32.6% 17.5%;
+  --accent-foreground: 191 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 191 40% 98%;
+  --border: 191 32.6% 17.5%;
+  --input: 191 32.6% 17.5%;
+  --ring: 191 76.3% 48%;
+  --chart-1: 211 86% 51%;
+  --chart-2: 171 86% 51%;
+  --chart-3: 151 86% 51%;
+  --chart-4: 231 86% 51%;
+  --chart-5: 251 86% 51%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-in forwards;
+}
