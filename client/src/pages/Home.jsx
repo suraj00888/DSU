@@ -124,7 +124,7 @@ const HomePage = () => {
                 </span>
                 <span>Upcoming Events</span>
               </Link>
-              <Link to="/forum" className="flex items-center text-primary hover:text-primary/80 transition-colors group">
+              <Link to="/discussion" className="flex items-center text-primary hover:text-primary/80 transition-colors group">
                 <span className="mr-3 bg-primary/10 p-2 rounded-full group-hover:bg-primary/20 transition-colors">
                   <Newspaper className="h-5 w-5" />
                 </span>
