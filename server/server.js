@@ -31,12 +31,14 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const adminRoutes = require('./routes/admin');
 const eventRoutes = require('./routes/events');
+const postRoutes = require('./routes/posts');
 
 // Use routes
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/events', eventRoutes);
+app.use('/api/posts', postRoutes);
 
 // Example of a protected route
 app.get('/api/protected', protect, (req, res) => {
