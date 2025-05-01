@@ -89,7 +89,7 @@ router.post('/login', async (req, res) => {
         // Check if the user exists
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(400).json({ message: 'Invalid email or user does not exist.' });
+            return res.status(400).json({ message: 'Invalid email' });
         }
 
         // Verify password
@@ -120,7 +120,6 @@ router.post('/login', async (req, res) => {
             }
         });
     } catch (err) {
-        console.error('Error during login:', err);
         res.status(500).json({ message: 'Server error' });
     }
 });
