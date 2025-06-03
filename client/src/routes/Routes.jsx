@@ -10,7 +10,6 @@ import EditEvent from '../pages/EditEvent';
 import MyEvents from '../pages/MyEvents';
 import ResourcesPage from '../pages/ResourcesPage';
 import DiscussionForumPage from '../pages/DiscussionForumPage';
-import PostDetailsPage from '../pages/PostDetailsPage';
 import ForgotPassword from '../pages/ForgotPassword.jsx';
 import ResetPassword from '../pages/ResetPassword.jsx';
 import ProfilePage from '../pages/ProfilePage.jsx';
@@ -114,18 +113,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/discussion",
+    path: "/forum",
     element: (
       <AuthLayout authentication={true}>
         <DiscussionForumPage />
-      </AuthLayout>
-    ),
-  },
-  {
-    path: "/discussion/:postId",
-    element: (
-      <AuthLayout authentication={true}>
-        <PostDetailsPage />
       </AuthLayout>
     ),
   },

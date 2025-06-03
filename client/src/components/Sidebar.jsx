@@ -48,7 +48,7 @@ const Sidebar = () => {
     // Only show My Events for non-admin users
     ...(!isAdmin ? [{ path: '/my-events', icon: <Star size={20} />, label: 'My Events' }] : []),
     { path: '/resources', icon: <FileText size={20} />, label: 'Resources' },
-    { path: '/discussion', icon: <MessageSquare size={20} />, label: 'Discussion Forum' },
+    { path: '/forum', icon: <MessageSquare size={20} />, label: 'Discussion Forum' },
   ];
 
   return (
